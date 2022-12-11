@@ -1,7 +1,9 @@
 const express = require("express");
 const routes = require('./router');
+const connetiodb = require('./db/connection');
 
 const app = express();
+connetiodb();
 
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
