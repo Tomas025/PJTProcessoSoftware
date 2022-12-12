@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'K2D', sans-serif;
+}
+
+body {
+    background-color: #1E1E1E;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    margin-left: 5vw;
+}
+
+#bgModal {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 2;
+    display: block;
+}
+
+#modalCriarAtividade {
+    visibility: hidden;
+    width: 70%;
+    height: 70%;
+    background-color: #BBB2D1;
+    border-radius: 10px;
+    margin: 17vh auto 0 auto;
+}
+
+#modalVisualizarAtividade {
+    visibility: hidden;
+    width: 70%;
+    height: 70%;
+    background-color: #BBB2D1;
+    border-radius: 10px;
+    margin: 17vh auto 0 auto;
+}
+
+#headerModal {
+    height: 20%;
+    display: flex;
+    align-items: center;
+    background-color: #B3ADC0;
+    border-radius: 10px 10px 0 0;
+    padding-left: 10px;
+    font-size: 90%;
+    color: #00000080;
+}
+
+#bodyModal {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#bodyModal input {
+    width: 100%;
+    height: 50%;
+    font-size: 130%;
+}
+
+#headerModal input {
+    width: 50%;
+    height: 50%;
+    background-color: transparent;
+    border: none;
+    font-size: 130%;
+    cursor: pointer;
+    margin-left: 1vw;
+}
+
+#headerModal input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+#navBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3C3845;
+    margin-bottom: 5vh;
+}
+
+#logo {
+    width: 250px;
+    height: 65px;
+}
+
+#openModal {
+    width: 250px;
+    height: 40px;
+    background-color: #716D7B;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-left: 5vw;
+}
+
+#listaDeAtividades::-webkit-scrollbar{
+    width: 10px;
+}
+
+#listaDeAtividades::-webkit-scrollbar-thumb{
+    background-color: #706c7a71;
+    border-radius: 10px;
+}
+
+#listaDeAtividades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 60vh;
+    width: 50vw;
+    overflow-y: scroll;
+    margin: 5vh 0 0 21vw;
+}
+
+#atividade {
+    list-style: none;
+    width: 40vw;
+    background-color: #BBB2D1;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin: 15px 0;
+    padding: 20px 0 20px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.circle {
+    width: 12px;
+    height: 12px;
+    border: 1px solid #716D7B;
+    border-radius: 50%;
+    margin-right: 10px;
+}

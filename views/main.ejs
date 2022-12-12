@@ -4,9 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=K2D:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Processo de software</title>
 </head>
 <body>
+    <nav id="navBar">
+        <img src="/imgs/DAY_by_DAY.png" alt="DAY by DAY" id="logo">
+    </nav>
     <%- include('home/home'); %>
 </body>
+
+<script>
+    function openModal() {
+        document.getElementById('bgModal').style.visibility = 'visible';
+        document.getElementById('modalCriarAtividade').style.visibility = 'visible';
+    }
+    function openModalActivity() {
+        document.getElementById('bgModal').style.visibility = 'visible';
+        document.getElementById('modalVisualizarAtividade').style.visibility = 'visible';
+    }
+    function closeModal() {
+        document.getElementById('bgModal').style.visibility = 'hidden';
+        document.getElementById('modalCriarAtividade').style.visibility = 'hidden';
+        document.getElementById('modalVisualizarAtividade').style.visibility = 'hidden';
+    }
+</script>
+
 </html>

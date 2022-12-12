@@ -1,1 +1,81 @@
-<h1>teste 123</h1>
+<!-- MODAIS -->
+<div id="bgModal">
+    <div id="modalCriarAtividade">
+        <div id="headerModal">
+            <h1>Título: </h1>
+            <input type="text" name="titulo" id="titulo" placeholder="Ex.: Atividade 1">
+        </div>
+        <div id="bodyModal">
+            <div id="mainModal">
+                <h2>Categoria: </h2>
+                <input type="text" name="categoria" id="categoria">
+                
+                <h2>Descrição </h2>
+                <input type="text" name="descrição" id="descrição">
+            </div>
+            <div id="mainModal">
+                <h2>Data de início: </h2>
+                <input type="date" name="data" id="data">
+
+                <h2>Data de fim: </h2>
+                <input type="date" name="data2" id="data2">
+
+                <div>
+                    <h2>Início:</h2>
+                    <input type="time" name="time" id="time">
+                    
+                    <h2>Fim:</h2>
+                    <input type="time" name="time2" id="time2">
+                </div>
+
+                <div>
+                    <button>Finalizar</button>
+                    <button onclick="closeModal()">Cancelar</button>
+                    <button>lixeira</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="bgModal">
+    <div id="modalVisualizarAtividade">
+        <span onclick="closeModal()">&times;</span>
+        <p>apoi tome3</p> 
+    </div>
+</div>
+
+<div id="bgModal">
+    <div id="modalEditarAtividade">
+        <span onclick="closeModal()">&times;</span>
+        <p>apoi tome4</p> 
+    </div>
+</div>
+
+<main>
+    <button id="openModal" onclick="openModal()">+ Adicionar atividade</button>
+
+    <ul id="listaDeAtividades">
+        <li id="atividade" onclick="openModalActivity()"><div class="circle"></div>PAIA</li>
+        <li id="atividade" onclick="openModalActivity()"><div class="circle"></div>PAIA</li>
+        <li id="atividade" onclick="openModalActivity()"><div class="circle"></div>PAIA</li>
+        <li id="atividade" onclick="openModalActivity()"><div class="circle"></div>PAIA</li>
+        <li id="atividade" onclick="openModalActivity()"><div class="circle"></div>PAIA</li>
+        <li id="atividade" onclick="openModalActivity()"><div class="circle"></div>PAIA</li>
+        <li id="atividade" onclick="openModalActivity()"><div class="circle"></div>PAIA</li>
+        <li id="atividade" onclick="openModalActivity()"><div class="circle"></div>PAIA</li>
+        <li id="atividade" onclick="openModalActivity()"><div class="circle"></div>PAIA</li>
+        <li id="atividade" onclick="openModalActivity()"><div class="circle"></div>PAIA</li>
+        <li id="atividade" onclick="openModalActivity()"><div class="circle"></div>PAIA</li>
+        <li id="atividade" onclick="openModalActivity()"><div class="circle"></div>PAIA</li>
+        <li id="atividade" onclick="openModalActivity()"><div class="circle"></div>PAIA</li>
+        <li id="atividade" onclick="openModalActivity()"><div class="circle"></div>PAIA</li>
+        <li id="atividade" onclick="openModalActivity()"><div class="circle"></div>PAIA</li>
+        <li id="atividade" onclick="openModalActivity()"><div class="circle"></div>PAIA</li>
+        <li id="atividade" onclick="openModalActivity()"><div class="circle"></div>PAIA</li>
+        <li id="atividade" onclick="openModalActivity()"><div class="circle"></div>PAIA</li>
+        <li id="atividade" onclick="openModalActivity()"><div class="circle"></div>PAIA</li>
+        <li id="atividade" onclick="openModalActivity()"><div class="circle"></div>PAIA</li>
+        <li id="atividade" onclick="openModalActivity()"><div class="circle"></div>PAIA</li>
+    </ul>
+</main>
