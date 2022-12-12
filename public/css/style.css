@@ -3,16 +3,16 @@
     padding: 0;
     font-family: 'K2D', sans-serif;
 }
-
+ 
 body {
     background-color: #1E1E1E;
     font-family: Arial, Helvetica, sans-serif;
 }
-
+ 
 main {
     margin-left: 5vw;
 }
-
+ 
 #bgModal {
     visibility: hidden;
     position: fixed;
@@ -23,7 +23,11 @@ main {
     z-index: 2;
     display: block;
 }
-
+ 
+#mainModal {
+    width: 250px;
+}
+ 
 #modalCriarAtividade {
     visibility: hidden;
     width: 70%;
@@ -32,7 +36,71 @@ main {
     border-radius: 10px;
     margin: 17vh auto 0 auto;
 }
-
+ 
+#titulo {
+    margin-top: 3px;
+}
+ 
+#categoria {
+    background-color: #B3ADC0;
+    border-radius: 10px;
+    border: 0;
+    padding-left: 7px;
+    margin-bottom: 30px;
+    padding-bottom: 60px;
+}
+ 
+#descrição {
+    background-color: #B3ADC0;
+    border-radius: 10px;
+    border: 0;
+    padding-left: 7px;
+    padding-top: 120px;
+}
+ 
+#data {
+    background-color: #B3ADC0;
+    border-radius: 10px;
+    border: 0;
+    padding-left: 7px;
+}
+ 
+#data2 {
+    background-color: #B3ADC0;
+    border-radius: 10px;
+    border: 0;
+    padding-left: 7px;
+}
+ 
+#time{
+    background-color: #B3ADC0;
+    border-radius: 10px;
+    border: 0;
+    padding-left: 7px;
+}
+ 
+#time2 {
+    background-color: #B3ADC0;
+    border-radius: 10px;
+    border: 0;
+    padding-left: 7px;
+}
+ 
+.data1, .datafim, .inicio, .fim {
+    margin-top: 25px;
+    font-size: 20px;
+}
+ 
+.finalizar, .cancelar, .lixeira{
+    margin-top: 20px;
+    margin-left: 10px;
+    background-color: #9891A7;
+    border-radius: 10px;
+    border: 0;
+    width: 65px;
+    height: 40px;
+}
+ 
 #modalVisualizarAtividade {
     visibility: hidden;
     width: 70%;
@@ -41,7 +109,7 @@ main {
     border-radius: 10px;
     margin: 17vh auto 0 auto;
 }
-
+ 
 #headerModal {
     height: 20%;
     display: flex;
@@ -52,19 +120,19 @@ main {
     font-size: 90%;
     color: #00000080;
 }
-
+ 
 #bodyModal {
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
-
+ 
 #bodyModal input {
     width: 100%;
     height: 50%;
     font-size: 130%;
 }
-
+ 
 #headerModal input {
     width: 50%;
     height: 50%;
@@ -74,12 +142,12 @@ main {
     cursor: pointer;
     margin-left: 1vw;
 }
-
+ 
 #headerModal input:focus {
     box-shadow: 0 0 0 0;
     outline: 0;
 }
-
+ 
 #navBar {
     display: flex;
     align-items: center;
@@ -87,12 +155,12 @@ main {
     background-color: #3C3845;
     margin-bottom: 5vh;
 }
-
+ 
 #logo {
     width: 250px;
     height: 65px;
 }
-
+ 
 #openModal {
     width: 250px;
     height: 40px;
@@ -103,16 +171,16 @@ main {
     cursor: pointer;
     margin-left: 5vw;
 }
-
+ 
 #listaDeAtividades::-webkit-scrollbar{
     width: 10px;
 }
-
+ 
 #listaDeAtividades::-webkit-scrollbar-thumb{
     background-color: #706c7a71;
     border-radius: 10px;
 }
-
+ 
 #listaDeAtividades {
     display: flex;
     flex-direction: column;
@@ -122,7 +190,7 @@ main {
     overflow-y: scroll;
     margin: 5vh 0 0 21vw;
 }
-
+ 
 #atividade {
     list-style: none;
     width: 40vw;
@@ -136,7 +204,7 @@ main {
     display: flex;
     align-items: center;
 }
-
+ 
 .circle {
     width: 12px;
     height: 12px;
