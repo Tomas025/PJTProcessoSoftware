@@ -1,6 +1,6 @@
 <!-- MODAIS -->
 <div id="bgModal">
-    <form id="modalCriarAtividade">
+    <form id="modalCriarAtividade" action="javascript: criar();">
         <div id="headerModal">
             <h1>Título: </h1>
             <input type="text" name="titulo" id="titulo" placeholder="Ex.: Atividade 1">
@@ -11,7 +11,7 @@
                 <input type="text" name="categoria" id="categoria">
                
                 <h2 class="descrição">Descrição </h2>
-                <input type="text" name="descrição" id="descrição">
+                <textarea form="modalCriarAtividade" id="descrição" name="descrição" rows="5" cols="43"></textarea>
             </div>
             <div id="mainModal">
                 <h2 class="data1">Data de início: </h2>
@@ -20,31 +20,73 @@
                 <h2 class="datafim">Data de fim: </h2>
                 <input type="date" name="data2" id="data2">
  
-                <div>
-                    <h2 class="inicio">Início:</h2>
-                    <input type="time" name="time" id="time">
-                   
-                    <h2 class="fim">Fim:</h2>
-                    <input type="time" name="time2" id="time2">
+                <div style="display: flex;">
+                    <div style="margin: 0 5vw 20px 0;">                        
+                        <h2 class="inicio">Início:</h2>
+                        <input type="time" name="hora" id="hora">
+                    </div>
+                    <div>
+                        <h2 class="fim">Fim:</h2>
+                        <input type="time" name="hora2" id="hora2">
+                    </div>
                 </div>
- 
-                <div>
-                    <input type="submit" name="finalizar-criação" class="finalizar">Finalizar</input>
-                    <input type="reset" name="cancelar-criação" class="cancelar" onclick="closeModal()">Cancelar</input>
-                    <button class="lixeira">Lixeira</button>
+
+                <div style="display: flex; justify-content: space-around;">
+                    <input type="submit" value="Finalizar" name="finalizar-criação" class="finalizar" />
+                    <input type="reset" value="Cancelar" name="cancelar-criação" class="cancelar" onclick="closeModal()" />
                 </div>
             </div>
         </div>
     </form>
 </div>
+
+<div id="bgModal">
+    <form id="modalEditarAtividade" action="javascript: editar();">
+        <div id="headerModal">
+            <h1>Título: </h1>
+            <input type="text" name="titulo" id="titulo" placeholder="Ex.: Atividade 1">
+        </div>
+        <div id="bodyModal">
+            <div id="mainModal">
+                <h2 class="categoria">Categoria: </h2>
+                <input type="text" name="categoria" id="categoria">
+               
+                <h2 class="descrição">Descrição </h2>
+                <textarea form="modalCriarAtividade" id="descrição" name="descrição" rows="5" cols="43"></textarea>
+            </div>
+            <div id="mainModal">
+                <h2 class="data1">Data de início: </h2>
+                <input type="date" name="data" id="data">
  
+                <h2 class="datafim">Data de fim: </h2>
+                <input type="date" name="data2" id="data2">
+ 
+                <div style="display: flex;">
+                    <div style="margin: 0 5vw 20px 0;">                        
+                        <h2 class="inicio">Início: </h2>
+                        <input type="time" name="hora" id="hora">
+                    </div>
+                    <div>
+                        <h2 class="fim">Fim: </h2>
+                        <input type="time" name="hora2" id="hora2">
+                    </div>
+                </div>
+ 
+                <input type="submit" value="Finalizar" name="finalizar-criação" class="finalizar" />
+                <input type="reset" value="Cancelar" name="cancelar-criação" class="cancelar" onclick="closeModal()" />
+                <button class="lixeira" onclick="closeModal()"><i class="bi bi-trash3"></i></button>
+            </div>
+        </div>
+    </form>
+</div>
+
 <div id="bgModal">
     <div id="modalVisualizarAtividade">
         <span onclick="closeModal()">&times;</span>
         <p>apoi tome3</p>
     </div>
 </div>
- 
+
 <div id="bgModal">
     <div id="modalEditarAtividade">
         <span onclick="closeModal()">&times;</span>
@@ -78,4 +120,6 @@
         <li id="atividade" onclick="openModalActivity()"><div class="circle"></div>PAIA</li>
         <li id="atividade" onclick="openModalActivity()"><div class="circle"></div>PAIA</li>
     </ul>
+
+    <canvas class="line-chart"></canvas>
 </main>
