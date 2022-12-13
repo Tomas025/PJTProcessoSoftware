@@ -1,6 +1,6 @@
 <!-- MODAIS -->
 <div id="bgModal">
-    <form id="modalCriarAtividade" action="javascript: criar();">
+    <form id="modalCriarAtividade" action="/createtask" method="post">
         <div id="headerModal">
             <h1>Título: </h1>
             <input type="text" name="titulo" id="titulo" placeholder="Ex.: Atividade 1">
@@ -98,7 +98,7 @@
     <button id="openModal" onclick="openModal()">+ Adicionar atividade</button>
  
     <ul id="listaDeAtividades">
-        <li id="atividade" onclick="openModalActivity()"><div class="circle"></div>PAIA</li>
+        <li id="atividade" onclick="openModalActivity()"><div><div class="circle"></div>PAIA<span style="justify-self: flex-end;" onclick="openModalEdit()">&hellip;</span></li>
         <li id="atividade" onclick="openModalActivity()"><div class="circle"></div>PAIA</li>
         <li id="atividade" onclick="openModalActivity()"><div class="circle"></div>PAIA</li>
         <li id="atividade" onclick="openModalActivity()"><div class="circle"></div>PAIA</li>
