@@ -144,3 +144,11 @@ main {
     border-radius: 50%;
     margin-right: 10px;
 }
+
+#options {
+    justify-self: flex-end;
+    margin-right: 10px;
+    cursor: pointer;
+    background-color: aqua;
+    z-index: 2;
+}

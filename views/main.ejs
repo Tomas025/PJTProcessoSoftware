@@ -7,29 +7,70 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=K2D:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.0.1/chart.min.js" integrity="sha512-tQYZBKe34uzoeOjY9jr3MX7R/mo7n25vnqbnrkskGr4D6YOoPYSpyafUAzQVjV6xAozAqUFIEFsCO4z8mnVBXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Processo de software</title>
 </head>
 <body>
     <nav id="navBar">
         <img src="/imgs/DAY_by_DAY.png" alt="DAY by DAY" id="logo">
     </nav>
+
     <%- include('home/home'); %>
 </body>
 
 <script>
+    var ctx = document.getElementsByClassName("line-chart");
+    var chartGraph = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo'],
+            datasets: [{
+                label: 'Atividades',
+                data: [12, 19, 3, 5, 2, 3, 1],
+                borderWhidth: 6,
+                borderColor: '#FF0000',
+                backgroundColor: '#f458',
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
     function openModal() {
         document.getElementById('bgModal').style.visibility = 'visible';
         document.getElementById('modalCriarAtividade').style.visibility = 'visible';
     }
+
     function openModalActivity() {
         document.getElementById('bgModal').style.visibility = 'visible';
         document.getElementById('modalVisualizarAtividade').style.visibility = 'visible';
     }
+    
+    function openModalEdit() {
+        document.getElementById('bgModal').style.visibility = 'visible';
+        document.getElementById('modalEditarAtividade').style.visibility = 'visible';
+    }
+
     function closeModal() {
         document.getElementById('bgModal').style.visibility = 'hidden';
         document.getElementById('modalCriarAtividade').style.visibility = 'hidden';
         document.getElementById('modalVisualizarAtividade').style.visibility = 'hidden';
+    }
+
+    function openDropdown() {
+        let teste = document.getElementById('menuDropdown').style.display;
+        if( teste == 'none') {
+            document.getElementById('menuDropdown').style.display = 'block';
+        } else {
+            document.getElementById('menuDropdown').style.display = 'none';
+        }
     }
 </script>
 
